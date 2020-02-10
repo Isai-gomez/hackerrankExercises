@@ -15,16 +15,18 @@ function hourglassSum( arr ){
 
 function xMatriz( arr ){
     let count = 0;
-    for(let element of arr) {
-        element.map((element, index) => {
-            debugger
-            if(count === index){
-                console.log(element);
-            }
-        })
-        count++;
-        
-    }      
+    let lineOne = 0;
+    arr.map( element => {        
+        element.map((element,index) => {
+          if(count === index){
+              lineOne += element;
+          }
+    });
+    count++;
+    })
+    return lineOne;      
 }
 
+const Xmatriz = xMatriz(input);
+console.log(Xmatriz);
 console.log(hourglassSum(input));
