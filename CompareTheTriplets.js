@@ -1,19 +1,20 @@
-const a = [1,2,3];
-const b = [3,2,1];
+const a = [1,2,3,3,2];
+const b = [3,2,1,3.5];
 
+//Contar diferencia de puntos en dos participante de una competencia
 function compareTriples(a,b){
     //Almacenar puntos
     let Alice = 0;
     let Bob = 0;
-    for(let i=0; i< a.length; i++){
-        if(a[i] > b[i]){
-           Alice +=1;
+    a.map((element, index) => {
+        if(element > b[index]){
+            Alice +=1;
         }
-        if(a[i] < b[i]){
+        if(element < b[index]){
             Bob +=1;
         }
-    }
-    return [Alice, Bob];
+    })
+   return [Alice, Bob];
 }
 
 console.log(compareTriples(a,b));
