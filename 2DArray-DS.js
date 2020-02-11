@@ -12,21 +12,33 @@ function hourglassSum( arr ){
     
     
 }
-
-function xMatriz( arr ){
+// recibe una matriz con el número de filas y columnas iguales
+function xMatriz(arr){
+    //acomuladores y contadores para la primera y segunda diagonal
     let count = 0;
     let lineOne = 0;
-    arr.map( element => {        
-        element.map((element,index) => {
-          if(count === index){
-              lineOne += element;
-          }
-    });
-    count++;
-    })
-    return lineOne;      
+    let countOne = arr.length-1;
+    let lineTow = 0;
+    //obtener primera diagonal 
+    for(let index of arr){
+        index.map((element, index) => {
+            if(count === index){
+                lineOne += element;
+            }
+        });
+        count++;
+    }
+    //obtener segunda diagonal
+    for(let index of arr){
+        index.map((element, index) => {
+            if(countOne === index){
+                lineTow += element
+            }
+        });
+        countOne--;
+    }
+    return lineOne + lineTow;      
 }
 
-const Xmatriz = xMatriz(input);
-console.log(Xmatriz);
 console.log(hourglassSum(input));
+console.log(xMatriz(input))
