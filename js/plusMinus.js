@@ -1,19 +1,19 @@
 const input = [ 6,
-    -4, 3, -9, 0, 4, 1, 
+    [-4, 3, -9, 0, 4, 1] 
 ];
 
 function plusMinus(arr){
     let poitive = 0;
     let negative = 0;
     let cero = 0;
-    for(let i = 1; i <= arr[0]; i++){
-        if(arr[i] > 0){
+    for(let i = 0; i < arr[0]; i++){
+        if(arr[1][i] > 0){
             poitive++;
         }
-        if(arr[i] < 0){
+        if(arr[1][i] < 0){
             negative++;
         }
-        if(arr[i] === 0){
+        if(arr[1][i] === 0){
             cero++;
         }  
      
