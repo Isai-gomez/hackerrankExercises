@@ -5,8 +5,7 @@ export const daysIn = [
   "Wednesday",
   "Thurday",
   "Friday",
-  "Saturday",
-  ""
+  "Saturday"
 ];
 export const daysEs = [
   "Domingo",
@@ -15,6 +14,5 @@ export const daysEs = [
   "Miercoles",
   "Jueves",
   "Viernes",
-  "Sabado",
-  ""
+  "Sabado"
 ];

@@ -5,12 +5,12 @@ export function main() {
 
   // Function crear section
   const createSection = days => {
-    let section = "<section>";
+    let select = `<select name='week'>`;
     days.map(element => {
-      section += `<option>${element}</option>`;
+      select += `<option>${element}</option>`;
     });
-    section += "</section>";
-    return section;
+    select + `</select>`;
+    return select;
   };
   //Function añadir tag al body
   const addTag = tag => {
