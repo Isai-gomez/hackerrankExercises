@@ -1,9 +1,10 @@
 import { daysIn, daysEs } from "./datos.js";
+//Function de inicio
 export function main() {
   // Seleccionar body del DOM
   const body = document.querySelector("body");
 
-  // Function crear section
+  // Function crear select
   const createSection = days => {
     let select = `<select name='week'>`;
     days.map(element => {
@@ -16,6 +17,6 @@ export function main() {
   const addTag = tag => {
     return (tag.innerHTML = createSection(daysIn));
   };
-  //main de funnciones
+  //ejecutar funcion addTag
   addTag(body);
 }

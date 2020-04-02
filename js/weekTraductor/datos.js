@@ -1,3 +1,4 @@
+//Datos utilizados en la app web
 export const daysIn = [
   "Sunday",
   "Monday",
