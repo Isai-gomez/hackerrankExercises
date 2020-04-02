@@ -20,9 +20,9 @@ export function main() {
   //ejecutar funcion addTag
   addTag(body);
   //Seleccionar opciones del select
-  const optionDisable = document.querySelectorAll("option");
+  let optionDisable = document.querySelectorAll("select");
   optionDisable = addEventListener("click", function() {
-    console.log(optionDisable);
+    let option = this.document.querySelector("option");
+    console.log(option);
   });
-  optionDisable();
 }
