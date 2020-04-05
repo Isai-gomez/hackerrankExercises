@@ -7,9 +7,9 @@ export function main() {
 
   // Function crear select
   const createSection = days => {
-    let select = `<select name='week'>`;
+    let select = `<select name='week' class='listSelect'>`;
     days.map(element => {
-      select += `<option>${element}</option>`;
+      select += `<option class='itemOption'>${element}</option>`;
     });
     select + `</select>`;
     return select;
@@ -25,7 +25,7 @@ export function main() {
   addTag(body);
   addDiv(body);
   //Seleccionar opciones del select
-  let day = "";
+
   let optionDisable = document.querySelector("select");
   optionDisable.addEventListener("change", event => {
     const result = document.querySelector(".result");
