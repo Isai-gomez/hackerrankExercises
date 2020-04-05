@@ -46,6 +46,9 @@ const getDaySpanish = day => {
     case "Wednesday":
       return "Miercoles";
       break;
+    case "Thurday":
+      return "Jueves";
+      break;
     case "Friday":
       return "Viernes";
       break;
