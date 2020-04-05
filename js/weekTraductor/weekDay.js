@@ -28,6 +28,30 @@ export function main() {
   let optionDisable = document.querySelector("select");
   optionDisable.addEventListener("change", event => {
     const result = document.querySelector(".result");
-    result.textContent = `La traducion es ${event.target.value}`;
+    result.textContent = `${getDaySpanish(event.target.value)}`;
   });
 }
+// devolver dia en español
+const getDaySpanish = day => {
+  switch (day) {
+    case "Sunday":
+      return "Domingo";
+      break;
+    case "Monday":
+      return "Lunes";
+      break;
+    case "Tuesday":
+      return "Martes";
+      break;
+    case "Wednesday":
+      return "Miercoles";
+      break;
+    case "Friday":
+      return "Viernes";
+      break;
+    case "Saturday":
+      return "Sabado";
+    default:
+      return "No puedo traducir";
+  }
+};
