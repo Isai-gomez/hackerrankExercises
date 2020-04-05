@@ -17,12 +17,17 @@ export function main() {
   const addTag = tag => {
     return (tag.innerHTML = createSection(daysIn));
   };
+  const addDiv = tag => {
+    return (tag.innerHTML += `<div class='result'></div>`);
+  };
   //ejecutar funcion addTag
   addTag(body);
+  addDiv(body);
   //Seleccionar opciones del select
-  let optionDisable = document.querySelectorAll("select");
-  optionDisable = addEventListener("click", function() {
-    let option = this.document.querySelector("option");
-    console.log(option);
+  let day = "";
+  let optionDisable = document.querySelector("select");
+  optionDisable.addEventListener("change", event => {
+    const result = document.querySelector(".result");
+    result.textContent = `La traducion es ${event.target.value}`;
   });
 }
