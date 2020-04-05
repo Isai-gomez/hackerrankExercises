@@ -1,4 +1,5 @@
 import { daysIn, daysEs } from "./datos.js";
+import { getDaySpanish } from "./Traductor.js";
 //Function de inicio
 export function main() {
   // Seleccionar body del DOM
@@ -31,30 +32,3 @@ export function main() {
     result.textContent = `${getDaySpanish(event.target.value)}`;
   });
 }
-// devolver dia en español
-const getDaySpanish = day => {
-  switch (day) {
-    case "Sunday":
-      return "Domingo";
-      break;
-    case "Monday":
-      return "Lunes";
-      break;
-    case "Tuesday":
-      return "Martes";
-      break;
-    case "Wednesday":
-      return "Miercoles";
-      break;
-    case "Thurday":
-      return "Jueves";
-      break;
-    case "Friday":
-      return "Viernes";
-      break;
-    case "Saturday":
-      return "Sabado";
-    default:
-      return "No puedo traducir";
-  }
-};
