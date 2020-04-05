@@ -6,7 +6,7 @@ export function main() {
 
   // Function crear select
   const createSection = days => {
-    let select = `<select name='week'`;
+    let select = `<select name='week'>`;
     days.map(element => {
       select += `<option>${element}</option>`;
     });
