@@ -8,8 +8,8 @@ export function main() {
   //ejecutar funcion addTag
   addTag(body);
   addDiv(body);
-  //Seleccionar opciones del select
 
+  //Seleccionar opciones del select
   let optionDisable = document.querySelector("select");
   optionDisable.addEventListener("change", event => {
     const result = document.querySelector(".result");
